@@ -53,6 +53,7 @@ html {
 .container{
   display: grid;
   gap: 15px;
+
   grid-template-columns: repeat(auto-fit, minmax(10vw, 3fr));
   grid-template-rows: repeat(auto-fit, minmax(10vh, 3fr));
 }
