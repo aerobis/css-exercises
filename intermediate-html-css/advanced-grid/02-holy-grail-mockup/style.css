@@ -101,11 +101,12 @@ ul{
   gap: 4px;
   padding-bottom: 5px;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
 }
 
 .header{
-  grid-column: 1 / -1;
+  grid-column: 1 / 3;
   grid-row: 1 / 2;
 
   display: grid;
@@ -114,7 +115,7 @@ ul{
 
 .sidebar{
   grid-column: 1 / 2;
-  grid-row: 2 / 6;
+  grid-row: 2 / 4;
 
   display: grid;
   gap: 50px;
@@ -122,14 +123,26 @@ ul{
 
 .nav{
   grid-column: 2 / -1;
+  grid-row: 2 / 3;
 }
 
 .article{
   grid-column: 2 / -1;
+  grid-row: 3 / 4;
+
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  overflow: auto;
 }
 
 .footer{
-  grid-column: 1 / -1;
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+
+  display: grid;
+  place-items: center;
 }
 
 /*FOR THE ELEMENTS INSIDE THE GRIDS*/
@@ -138,6 +151,7 @@ ul{
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: subgrid;
+  place-items: center;
   gap: 5px;
 }
 
