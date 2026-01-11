@@ -116,7 +116,8 @@ ul{
   grid-column: 1 / 2;
   grid-row: 2 / 6;
 
-  
+  display: grid;
+  gap: 50px;
 }
 
 .nav{
@@ -139,3 +140,10 @@ ul{
   grid-template-columns: subgrid;
   gap: 5px;
 }
+
+.sidebar > .photo,
+.sidebar > .side-content{
+  display: grid;
+  place-items: center;
+}
+
