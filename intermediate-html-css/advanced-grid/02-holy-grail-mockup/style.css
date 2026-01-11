@@ -147,3 +147,10 @@ ul{
   place-items: center;
 }
 
+.nav > ul{
+  display: grid;
+  grid-auto-flow: column;
+}
+
+
+
